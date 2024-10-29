@@ -322,7 +322,7 @@ const AdminProfile = () => {
           padding: "20px",
           marginTop: "100px", // Push the main content down a bit
           height: "100vh",
-        //  overflow: "auto",
+         overflow: "auto",
         }}
       >
         {/* Profile Section */}
