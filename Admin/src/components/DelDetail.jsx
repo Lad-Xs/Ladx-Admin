@@ -92,6 +92,7 @@ const DelDetail = () => {
             flexDirection: "column",
             justifyContent: "space-between",
             padding: "20px 0",
+            marginLeft: { xs: "-70px", sm: "5px" },
           }}
         >
           {/* List of navigation items */}
@@ -328,8 +329,7 @@ const DelDetail = () => {
           position: "relative",
           height: "100vh",
           //  overflow: "auto",
-          padding: "20px 0", // Reduce padding for mobile
-          marginLeft: { xs: "-70px", sm: "5px" },
+          padding: "20px ", // Reduce padding for mobile
         }}
       >
         {/* Header */}
