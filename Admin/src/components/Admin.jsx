@@ -80,6 +80,7 @@ const Admin = () => {
             flexDirection: "column",
             justifyContent: "space-between",
             padding: "20px 0",
+            marginLeft: { xs: "-70px", sm: "5px" },
           }}
         >
           {/* List of navigation items */}
@@ -440,9 +441,12 @@ const Admin = () => {
 
         {/* Search bar with search icon on the left */}
         <Box
-          sx={{ display: "flex", alignItems: "center", 
+          sx={{
+            display: "flex",
+            alignItems: "center",
             marginTop: "15px",
-            marginBottom: "10px" }}
+            marginBottom: "10px",
+          }}
         >
           <TextField
             variant="outlined"

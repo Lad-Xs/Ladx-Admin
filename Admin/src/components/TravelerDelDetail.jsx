@@ -94,6 +94,7 @@ const TravelerDelDetail = () => {
             flexDirection: "column",
             justifyContent: "space-between",
             padding: "20px 0",
+            marginLeft: { xs: "-70px", sm: "5px" },
           }}
         >
           {/* List of navigation items */}
@@ -329,7 +330,7 @@ const TravelerDelDetail = () => {
           marginTop: "100px",
           position: "relative",
           height: "100vh",
-       //   overflow: "auto",
+          //   overflow: "auto",
           padding: "20px", // Reduce padding for mobile
         }}
       >

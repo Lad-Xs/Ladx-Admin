@@ -144,6 +144,7 @@ const AdminMessage = () => {
             flexDirection: "column",
             justifyContent: "space-between",
             padding: "20px 0",
+            marginLeft: { xs: "-70px", sm: "5px" },
           }}
         >
           {/* List of navigation items */}
@@ -380,7 +381,7 @@ const AdminMessage = () => {
           position: "relative",
           marginTop: "100px",
           height: "100vh",
-        //  overflow: "auto",
+          //  overflow: "auto",
         }}
       >
         <Typography>

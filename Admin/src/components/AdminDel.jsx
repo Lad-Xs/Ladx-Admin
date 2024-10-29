@@ -90,6 +90,7 @@ const AdminDel = () => {
             flexDirection: "column",
             justifyContent: "space-between",
             padding: "20px 0",
+            marginLeft: { xs: "-70px", sm: "5px" },
           }}
         >
           {/* List of navigation items */}
@@ -337,13 +338,13 @@ const AdminDel = () => {
           padding: "20px",
           flexGrow: 1,
           height: "100vh",
-         // overflow: "auto", // Reduce padding for mobile
+          // overflow: "auto", // Reduce padding for mobile
         }}
       >
         {/* Header */}
         <Typography
           variant={isMobile ? "h6" : "h5"} // Change header size based on screen size
-          sx={{ marginBottom: "10px" }} // Reduce margin for mobile
+          sx={{ marginBottom: "10px", marginLeft: "" }} // Reduce margin for mobile
         >
           Delivery Orders
         </Typography>
@@ -416,10 +417,6 @@ const AdminDel = () => {
                     justifyContent: "space-between",
                     padding: "10px",
                     flexDirection: "row",
-                    "&:hover": {
-                      cursor: "pointer", // Change cursor on hover
-                      boxShadow: "0 0 10px rgba(0,0,0,0.3)", // Optional: add hover effect
-                    },
                     "@media (max-width: 600px)": {
                       flexDirection: "column",
                       height: "auto", // Adjust height for small screens

@@ -327,8 +327,9 @@ const DelDetail = () => {
           marginTop: "100px",
           position: "relative",
           height: "100vh",
-        //  overflow: "auto",
-          padding: "20px", // Reduce padding for mobile
+          //  overflow: "auto",
+          padding: "20px 0", // Reduce padding for mobile
+          marginLeft: { xs: "-70px", sm: "5px" },
         }}
       >
         {/* Header */}
