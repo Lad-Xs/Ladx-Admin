@@ -23,14 +23,15 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import SendIcon from "@mui/icons-material/Send";
 import { useNavigate } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
-import test from "../assets/test.jpg";
-import joanna from "../assets/joanna.jpg";
-import men from "../assets/men.jpg";
-import susan from "../assets/susa.jpg";
-import leila from "../assets/leila.jpg"; // Import image for Alex
-import john from "../assets/john.jpg"; // Import image for Emily
+import test from "../../assets/test.jpg";
+import joanna from "../../assets/joanna.jpg";
+import men from "../../assets/men.jpg";
+import susan from "../../assets/susa.jpg";
+import leila from "../../assets/leila.jpg"; // Import image for Alex
+import john from "../../assets/john.jpg"; // Import image for Emily
 import MessageIcon from "@mui/icons-material/Message";
-import AdminLayout from "./AdminLayout";
+import AdminLayout from "../AdminLayout";
+import UserInfo from "../UserInfo";
 
 const users = [
   {
@@ -109,101 +110,7 @@ const AdminMessage = () => {
   return (
     <AdminLayout>
       <Box sx={{ display: "flex", height: "100vh", backgroundColor: "white" }}>
-        {/* User Info Box */}
-        <Box
-          sx={{
-            position: "absolute",
-            top: "20px",
-            right: "20px",
-            width: { xs: "200px", sm: "280px" }, // Fixed width for small screens and up
-            height: "99px",
-            backgroundColor: "#FFFFFF",
-            borderRadius: "10px",
-            boxShadow: 1,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between", // Keep space between items
-            padding: "10px",
-            boxSizing: "border-box", // Include padding in box size
-          }}
-        >
-          {/* Bell Icon with Green Dot */}
-          <Badge
-            color="success"
-            variant="dot"
-            overlap="circular"
-            anchorOrigin={{
-              vertical: "top",
-              horizontal: "right",
-            }}
-            sx={{
-              marginRight: "2px", // Reduced space between bell and name
-            }}
-          >
-            <Box
-              sx={{
-                backgroundColor: "#210947",
-                borderRadius: "50%",
-                width: "40px",
-                height: "40px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <NotificationsIcon sx={{ color: "#FFFFFF" }} />
-            </Box>
-          </Badge>
-
-          {/* Name */}
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center", // Center items in the column
-              justifyContent: "center",
-            }}
-          >
-            <Typography
-              variant="h6"
-              sx={{
-                textAlign: "center",
-                fontSize: { xs: "0.9rem", sm: "1rem" },
-              }}
-            >
-              Sam Adeniyi
-            </Typography>
-            {/* Admin text below the name */}
-            <Typography
-              variant="body2"
-              sx={{
-                textAlign: "center",
-                marginTop: "2px",
-                fontSize: { xs: "0.7rem", sm: "0.8rem" },
-              }} // Adjusted font size for small screens
-            >
-              Admin
-            </Typography>
-          </Box>
-
-          {/* Small person icon to the right of the name */}
-          <Box
-            sx={{
-              backgroundColor: "#210947",
-              borderRadius: "4px",
-              width: "24px",
-              height: "24px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              marginLeft: "2px", // Reduced space between name and person icon
-            }}
-          >
-            <PersonIcon sx={{ color: "#FFFFFF", fontSize: "16px" }} />
-          </Box>
-        </Box>
-
+        <UserInfo />
         <Box
           sx={{
             flexGrow: 1,

@@ -1,18 +1,11 @@
 import React, { useState } from "react";
 import {
   Box,
-  // Badge,
-  Button,
   useMediaQuery,
   useTheme,
   Typography,
 } from "@mui/material";
-import { Link } from "react-router-dom";
-// import PersonIcon from "@mui/icons-material/Person";
-// import NotificationsIcon from "@mui/icons-material/Notifications"; // Bell Icon
-// import van from "../../assets/van.jpg";
 import { useNavigate } from "react-router-dom";
-// import susa from "../../assets/susa.jpg";
 import AdminLayout from "../AdminLayout";
 import UserInfo from "../UserInfo"; 
 import SenderDeliveryInfo from "./SenderDeliveryInfo";

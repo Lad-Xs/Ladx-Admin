@@ -3,14 +3,14 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Admin from "./components/Admin/Admin";
 import AdminDel from "./components/DeliveryDetail/AdminDel";
-import AdminProfile from "./components/AdminProfile";
-import AdminMessage from "./components/AdminMessage";
-import SenderMatch from "./components/SenderMatch";
+import AdminProfile from "./components/AdminProfile/AdminProfile";
+import AdminMessage from "./components/Message/AdminMessage";
+import SenderMatch from "./components/SenderMatch/SenderMatch";
 import Settings from "./components/Settings";
-import TravelerDelDetail from "./components/TravelerDelDetail";
-import TravelerMatched from "./components/TravelerMatched";
-import DelDetail from "./components/DelDetail";
-import User from "./components/User";
+import TravelerDelDetail from "./components/TravelerDetailDelivery/TravelerDelDetail";
+import TravelerMatched from "./components/TravelerMatch/TravelerMatched";
+import DelDetail from "./components/DetailsDelivery/DelDetail";
+import User from "./components/User/User";
 import "./App.css";
 
 const App = () => {
