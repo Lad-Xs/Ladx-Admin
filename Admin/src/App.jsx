@@ -1,7 +1,7 @@
 // App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Admin from "./components/Admin";
+import Admin from "./components/Admin/Admin";
 import AdminDel from "./components/DeliveryDetail/AdminDel";
 import AdminProfile from "./components/AdminProfile";
 import AdminMessage from "./components/AdminMessage";
