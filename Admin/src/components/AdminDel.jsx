@@ -1,28 +1,19 @@
 import React, { useState } from "react";
 import {
   Box,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
   Badge,
   Button,
   useMediaQuery,
   useTheme,
   Typography,
 } from "@mui/material";
-import HomeIcon from "@mui/icons-material/Home";
 import { Link } from "react-router-dom";
-import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import PersonIcon from "@mui/icons-material/Person";
-import SettingsIcon from "@mui/icons-material/Settings";
-import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import NotificationsIcon from "@mui/icons-material/Notifications"; // Bell Icon
 import van from "../assets/Van.jpg";
 import { useNavigate } from "react-router-dom";
 import susa from "../assets/susa.jpg";
-import test from "../assets/test.jpg";
-import MessageIcon from "@mui/icons-material/Message";
+import AdminLayout from "./AdminLayout";
 
 const AdminDel = () => {
   const navigate = useNavigate(); // Hook for navigation
@@ -52,180 +43,8 @@ const AdminDel = () => {
   };
 
   return (
+        <AdminLayout>
     <Box sx={{ display: "flex", height: "100vh", backgroundColor: "white" }}>
-      {/* Sidebar with logo */}
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          position: "fixed", // Make the sidebar fixed
-          top: 0,
-          left: 0,
-          height: "100vh", // Full height to avoid scrolling
-          zIndex: 1000, // Ensures it's above other content
-        }}
-      >
-        {/* Logo at the top */}
-        <Box
-          component="img"
-          src={test} // Update with your logo path
-          alt="Ladx Logo"
-          sx={{
-            width: "150px",
-            height: "auto",
-            marginTop: "20px",
-            marginBottom: "30px",
-          }}
-        />
-
-        {/* Sidebar below the logo with curved top */}
-        <Box
-          sx={{
-            backgroundColor: "#210947",
-            width: { xs: "80px", sm: "226px" }, // Width changes based on screen size
-            height: "100%", // Full height
-            borderTopRightRadius: "80px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            padding: "20px 0",
-            marginLeft: { xs: "-70px", sm: "5px" },
-          }}
-        >
-          {/* List of navigation items */}
-          <List sx={{ color: "#D3D3D3" }}>
-            {/* Home */}
-            <ListItem
-              button
-              onClick={() => handleNavigation("/admin")} // Navigate to admin
-              sx={{
-                "&:hover": { color: "#FFF" },
-                "&:active": { color: "#F66F1E" },
-                justifyContent: { xs: "center", sm: "flex-start" }, // Center icon on small screens
-              }}
-            >
-              <ListItemIcon
-                sx={{ minWidth: { xs: "unset", sm: "40px" }, color: "#D3D3D3" }}
-              >
-                <HomeIcon />
-              </ListItemIcon>
-              <ListItemText
-                primary="Home"
-                sx={{ display: { xs: "none", sm: "block" } }} // Hide text on small screens
-              />
-            </ListItem>
-
-            {/* Orders */}
-            <ListItem
-              button
-              onClick={() => handleNavigation("/admin-l")} // Navigate to admin-l
-              sx={{
-                "&:hover": { color: "#FFF" },
-                "&:active": { color: "#F66F1E" },
-                justifyContent: { xs: "center", sm: "flex-start" }, // Center icon on small screens
-              }}
-            >
-              <ListItemIcon
-                sx={{ minWidth: { xs: "unset", sm: "40px" }, color: "#D3D3D3" }}
-              >
-                <LocalShippingIcon />
-              </ListItemIcon>
-              <ListItemText
-                primary="Orders"
-                sx={{ display: { xs: "none", sm: "block" } }} // Hide text on small screens
-              />
-            </ListItem>
-
-            {/* Users */}
-            <ListItem
-              button
-              onClick={() => handleNavigation("/user")} // Navigate to user
-              sx={{
-                "&:hover": { color: "#FFF" },
-                "&:active": { color: "#F66F1E" },
-                justifyContent: { xs: "center", sm: "flex-start" }, // Center icon on small screens
-              }}
-            >
-              <ListItemIcon
-                sx={{ minWidth: { xs: "unset", sm: "40px" }, color: "#D3D3D3" }}
-              >
-                <PersonIcon />
-              </ListItemIcon>
-              <ListItemText
-                primary="Users"
-                sx={{ display: { xs: "none", sm: "block" } }} // Hide text on small screens
-              />
-            </ListItem>
-
-            {/* Message */}
-            <ListItem
-              button
-              onClick={() => handleNavigation("/admin-m")} // Navigate to admin-m
-              sx={{
-                "&:hover": { color: "#FFF" },
-                "&:active": { color: "#F66F1E" },
-                justifyContent: { xs: "center", sm: "flex-start" }, // Center icon on small screens
-              }}
-            >
-              <ListItemIcon
-                sx={{ minWidth: { xs: "unset", sm: "40px" }, color: "#D3D3D3" }}
-              >
-                <MessageIcon />{" "}
-              </ListItemIcon>
-              <ListItemText
-                primary="Messages"
-                sx={{ display: { xs: "none", sm: "block" } }} // Hide text on small screens
-              />
-            </ListItem>
-
-            {/* Settings */}
-            <ListItem
-              button
-              onClick={() => handleNavigation("/settings")} // Navigate to settings
-              sx={{
-                "&:hover": { color: "#FFF" },
-                "&:active": { color: "#F66F1E" },
-                justifyContent: { xs: "center", sm: "flex-start" }, // Center icon on small screens
-              }}
-            >
-              <ListItemIcon
-                sx={{ minWidth: { xs: "unset", sm: "40px" }, color: "#D3D3D3" }}
-              >
-                <SettingsIcon />
-              </ListItemIcon>
-              <ListItemText
-                primary="Settings"
-                sx={{ display: { xs: "none", sm: "block" } }} // Hide text on small screens
-              />
-            </ListItem>
-          </List>
-
-          {/* Logout near the bottom */}
-          <List sx={{ color: "#D3D3D3" }}>
-            <ListItem
-              button
-              onClick={() => handleNavigation("/admin")} // Logout to admin page
-              sx={{
-                "&:hover": { color: "#FFF" },
-                "&:active": { color: "#F66F1E" },
-                justifyContent: { xs: "center", sm: "flex-start" }, // Center icon on small screens
-              }}
-            >
-              <ListItemIcon
-                sx={{ minWidth: { xs: "unset", sm: "40px" }, color: "#D3D3D3" }}
-              >
-                <ExitToAppIcon />
-              </ListItemIcon>
-              <ListItemText
-                primary="Logout"
-                sx={{ display: { xs: "none", sm: "block" } }} // Hide text on small screens
-              />
-            </ListItem>
-          </List>
-        </Box>
-      </Box>
-
       <Box
         sx={{
           marginLeft: { xs: "60px", sm: "176px" }, // Leave space for the fixed sidebar
@@ -698,6 +517,7 @@ const AdminDel = () => {
         )}
       </Box>
     </Box>
+    </AdminLayout>
   );
 };
 
